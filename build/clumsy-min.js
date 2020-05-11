@@ -326,7 +326,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     me.game.viewport.height/2 + 50
                 );
 
-                if(game.data.steps > 0) {
+                if(game.data.steps > 99) {
                     var done = "C093-RR6F-QTHR-35FB";
                     var doneText = this.lootfont.measureText(renderer, done);
                     //loot
