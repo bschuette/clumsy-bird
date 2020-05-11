@@ -327,7 +327,7 @@ game.TitleScreen = me.ScreenObject.extend({
                 );
 
                 if(game.data.steps > 0) {
-                    var done = "GUTSCHEIN: XXXX-XXXX-XXXX-XXXX"
+                    var done = readTextFile("file:///../../4z732894792834792047239846384.txt");
                     var doneText = this.lootfont.measureText(renderer, done);
                     //loot
                     this.font.draw(
@@ -355,3 +355,21 @@ game.TitleScreen = me.ScreenObject.extend({
         me.audio.stop("theme");
     }
 });
+
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
