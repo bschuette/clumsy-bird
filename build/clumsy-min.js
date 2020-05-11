@@ -326,7 +326,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     me.game.viewport.height/2 + 50
                 );
 
-                if(game.data.steps > 99) {
+                if(game.data.steps > -1) {
                     var done = "GUTSCHEIN: XXXX-XXXX-XXXX-XXXX"
                     var doneText = this.font.measureText(renderer, done);
                     //loot
