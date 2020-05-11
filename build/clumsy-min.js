@@ -257,7 +257,7 @@ game.TitleScreen = me.ScreenObject.extend({
         }
         this.dialog = new(me.Renderable.extend({
             init: function () {
-                this._super(me.Renderable, "init", [0, 0, me.game.viewport.width / 2, me.game.viewport.height / 2]), this.font = new me.Font("gamefont", 40, "black", "left"), this.steps = "Steps: " + game.data.steps.toString(), this.topSteps = "Higher Step: " + me.save.topSteps.toString()
+                this._super(me.Renderable, "init", [0, 0, me.game.viewport.width / 2, me.game.viewport.height / 2]), this.font = new me.Font("gamefont", 40, "black", "left"), this.steps = "Punkte: " + game.data.steps.toString(), this.topSteps = "Highscore: " + me.save.topSteps.toString()
             },
             draw: function (a) {
                 var b = this.font.measureText(a, this.steps);

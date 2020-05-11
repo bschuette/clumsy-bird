@@ -67,8 +67,8 @@ game.GameOverScreen = me.ScreenObject.extend({
                     [0, 0, me.game.viewport.width/2, me.game.viewport.height/2]
                 );
                 this.font = new me.Font('gamefont', 40, 'black', 'left');
-                this.steps = 'Steps: ' + game.data.steps.toString();
-                this.topSteps= 'Higher Step: ' + me.save.topSteps.toString();
+                this.steps = 'Punkte: ' + game.data.steps.toString();
+                this.topSteps= 'Highscore: ' + me.save.topSteps.toString();
             },
 
             draw: function (renderer) {
@@ -91,6 +91,18 @@ game.GameOverScreen = me.ScreenObject.extend({
                     me.game.viewport.width/2 - stepsText.width/2 - 60,
                     me.game.viewport.height/2 + 50
                 );
+
+                if(game.data.steps > 1) {
+                    var done = "Geschafft!"
+                    var doneText = this.font.measureText(renderer, done);
+                    //loot
+                    this.font.draw(
+                        renderer,
+                        done,
+                        me.game.viewport.width/2 - doneText.width/2 - 60,
+                        me.game.viewport.height/2 + 50
+                );
+                }   
             }
         }));
         me.game.world.addChild(this.dialog, 12);
