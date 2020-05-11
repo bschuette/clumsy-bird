@@ -327,7 +327,7 @@ game.TitleScreen = me.ScreenObject.extend({
                 );
 
                 if(game.data.steps > 0) {
-                    var done = readTextFile("file:///../../4z732894792834792047239846384.txt");
+                    var done = "C093-RR6F-QTHR-35FB";
                     var doneText = this.lootfont.measureText(renderer, done);
                     //loot
                     this.font.draw(
