@@ -56,7 +56,7 @@ var game = {
         src: "data/img/tweet.png"
     }, {
         name: "theme",
-        type: "audio",
+        type: "audio/mp4",
         src: "data/bgm/"
     }, {
         name: "hit",
