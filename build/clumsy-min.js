@@ -300,6 +300,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     [0, 0, me.game.viewport.width/2, me.game.viewport.height/2]
                 );
                 this.font = new me.Font('gamefont', 40, 'black', 'left');
+                this.lootfont = new me.Font('gamefont', 40, 'red', 'left');
                 this.steps = 'Punkte: ' + game.data.steps.toString();
                 this.topSteps= 'Highscore: ' + me.save.topSteps.toString();
             },
@@ -325,8 +326,8 @@ game.TitleScreen = me.ScreenObject.extend({
                     me.game.viewport.height/2 + 50
                 );
 
-                if(game.data.steps > 1) {
-                    var done = "Geschafft!"
+                if(game.data.steps > 99) {
+                    var done = "GUTSCHEIN: XXXX-XXXX-XXXX-XXXX"
                     var doneText = this.font.measureText(renderer, done);
                     //loot
                     this.font.draw(
@@ -350,6 +351,7 @@ game.TitleScreen = me.ScreenObject.extend({
         this.ground1 = null;
         this.ground2 = null;
         this.font = null;
+        this.lootfont = null;
         me.audio.stop("theme");
     }
 });
