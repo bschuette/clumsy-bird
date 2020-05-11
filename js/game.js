@@ -38,7 +38,7 @@ var game = {
             alert("Your browser does not support HTML5 canvas.");
             return;
         }
-        me.audio.init("mp3,ogg");
+        me.audio.init("mp3,mp4");
         me.loader.preload(game.resources, this.loaded.bind(this));
     },
 

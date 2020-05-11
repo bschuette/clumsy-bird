@@ -76,7 +76,7 @@ var game = {
             wrapper: "screen",
             scale: "auto",
             scaleMethod: "fit"
-        }) ? (me.audio.init("mp4,mp3"), void me.loader.preload(game.resources, this.loaded.bind(this))) : void alert("Your browser does not support HTML5 canvas.")
+        }) ? (me.audio.init("mp3,mp4"), void me.loader.preload(game.resources, this.loaded.bind(this))) : void alert("Your browser does not support HTML5 canvas.")
     },
     loaded: function () {
         me.state.set(me.state.MENU, new game.TitleScreen), me.state.set(me.state.PLAY, new game.PlayScreen), me.state.set(me.state.GAME_OVER, new game.GameOverScreen), me.input.bindKey(me.input.KEY.SPACE, "fly", !0), me.input.bindKey(me.input.KEY.M, "mute", !0), me.input.bindPointer(me.input.KEY.SPACE), me.pool.register("clumsy", game.BirdEntity), me.pool.register("pipe", game.PipeEntity, !0), me.pool.register("hit", game.HitEntity, !0), me.pool.register("ground", game.Ground, !0), me.state.change(me.state.MENU)
