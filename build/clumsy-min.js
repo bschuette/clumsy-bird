@@ -231,7 +231,7 @@ game.TitleScreen = me.ScreenObject.extend({
     onDestroyEvent: function () {
         me.audio.stopTrack("theme"), this.HUD = null, this.bird = null, this.ground1 = null, this.ground2 = null, me.input.unbindKey(me.input.KEY.SPACE), me.input.unbindPointer(me.input.pointer.LEFT)
     }
-}), game.GameOverScreen = new game.GameOverScreen();
+}), game.GameOverScreen = new game.GameOverScreen;
 
 /*me.ScreenObject.extend({
     init: function () {
