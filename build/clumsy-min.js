@@ -333,7 +333,7 @@ game.TitleScreen = me.ScreenObject.extend({
                     this.font.draw(
                         renderer,
                         done,
-                        me.game.viewport.width/2 - doneText.width/2 - 60,
+                        me.game.viewport.width/2 - doneText.width/2 - 40,
                         me.game.viewport.height/2 + 100
                 );
                 }   
